@@ -1,0 +1,46 @@
+﻿
+/* Style for the container */
+.todo-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+/* Style for the heading */
+.todo-heading {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the To-do items */
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Style for the checkbox */
+.todo-checkbox {
+    margin-right: 10px;
+}
+
+/* Style for the buttons */
+.todo-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Style for the "Add Todo" button */
+.add-todo-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
