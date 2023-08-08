@@ -1,0 +1,38 @@
+﻿@model TodoViewModel
+<center><p>
+<form asp-action="Insert" id="form_action" method="post" role="form">
+    <div asp-validation-summary="All"></div>
+        <label asp-for="Todo.Name"></label>
+        <input asp-for="Todo.Id" type="hidden"/>
+        <input asp-for="Todo.Name" />
+        <span asp-validation-for="Todo.Name"></span>
+        <input type="submit" id="form-button" value="Add Todo" />
+</form></center></p>
+<p>
+<div id="firstTable"><center>
+<table>
+    <thead>
+        <tr class="table-primary">
+            <th style="width:30%" scope="col">Id</th><br>
+            <th style="width:50%" scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var t in Model.TodoList)
+{
+    <tr>
+        <td class="todos-column" scope="row">@t.Id</td>
+        <td class="todos-column">@t.Name</td>
+        <td class="buttons-column">
+            <input type="submit" class="btn btn-danger" value="Delete" onClick="deleteTodo(@t.Id)">
+            <input type="submit" class="btn btn-primary" value="Update" onClick="populateForm(@t.Id)"></td>
+    </tr>
+
+}
+</tbody>
+</table>
+</div>
+</center>
+</p>
+</div>
+</div>
